@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mtbeach"
+authors = [
+    {name = "Lucas Sawade", email = "lsawade@princeton.edu"},
+]
+description = "Plotting Beachballs in 3D"
+readme = "README.rst"
+requires-python = ">=3.10"
+keywords = ["beachball", "moment tensor"]
+license = {text = "BSD-3-Clause"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "plotly",
+    'importlib-metadata; python_version<"3.8"',
+]
+dynamic = ["version"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
